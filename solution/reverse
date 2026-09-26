@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+touch foo.txt
+while read -r line; do
+  echo "$line" > tmp.txt && cat foo.txt >> tmp.txt && mv tmp.txt foo.txt
+done
+cat foo.txt
+rm foo.txt

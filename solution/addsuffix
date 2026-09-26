@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+suffix="$1"
+c=0
+for file in "$@"; do
+  if [ $c -ne 0 ]; then
+    mv "$file" "${file}${suffix}"
+ else
+    c=1
+  fi
+done
